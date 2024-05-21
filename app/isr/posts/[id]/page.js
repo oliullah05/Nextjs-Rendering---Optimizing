@@ -1,5 +1,6 @@
 import { getPost, getPosts } from "@/apis/apis";
 
+
 export default async function Post({ params: { id } }) {
     const post = await getPost(id);
 
