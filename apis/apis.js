@@ -26,10 +26,11 @@ export async function getPosts(type, delay = false) {
         fetchOptions = {
             cache: "no-store",
         };
-    } else if (type === "revalidated") {
-        const fetchOptions = {
+    }
+     else if (type === "revalidated") {
+         fetchOptions = {
             next: {
-                revalidate: 10, // second
+                revalidate: 5, // second
             },
         };
     }
