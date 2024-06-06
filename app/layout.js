@@ -1,29 +1,18 @@
-
 import "./globals.css";
 
-import {Inter} from "next/font/google"
-import LocalFont from "next/font/local"
-// const inter = Inter({ subsets: ["latin"] });
-
-const font = Inter({
-    subsets:["latin"],
-    display:"swap",
-    weight:["400","700"]
-})
-export const Myfont = LocalFont({
-    src:"../public/font.ttf",
-    display:"swap"
-
-})
 export const metadata = {
-    title: "Rendering",
-    description: "Understanding Next.js Rendering process",
+    title: "My website",
+    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
 };
 
 export default function RootLayout({ children }) {
     return (
-        <html lang="en" className={font.className}>
-            <body >{children}</body>
+        <html lang="en">
+            <body className="bg-gray-200 px-5">
+                <main className="mx-auto rounded bg-white max-w-5xl px-5 min-h-[100dvh]">
+                    {children}
+                </main>
+            </body>
         </html>
     );
 }
