@@ -15,7 +15,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
     openGraph: {
       images: [
         {
-          url: 'http://localhost:3000/api/og', 
+          url: `http://localhost:3000/api/og?title=${post.title}`, 
           width: 1200,
           height: 600,
         },
